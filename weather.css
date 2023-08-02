@@ -1,0 +1,208 @@
+body {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.body-part {
+  width: 800px;
+  margin: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navigation {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  vertical-align: top;
+
+}
+
+.search {
+  width: 250px;
+}
+
+.logo {
+  width: 50px;
+  border-radius: 25px;
+  margin: 25px;
+}
+
+.search-bar {
+  width: 100px;
+  margin-left: 30px;
+}
+
+.search-icon {
+  vertical-align: top;
+  margin-top: 0;
+  margin-left: -8px;
+  width: 21px;
+  height: 21.2px;
+  padding: 0;
+}
+
+
+
+.city-name {
+  flex: 1;
+}
+
+.cityName {
+  text-align: center;
+  margin: auto;
+  padding: 3px;
+  font-size: larger;
+}
+
+.time {
+  width: 100px;
+}
+
+.current-time {
+  margin: auto;
+  text-align: center;
+  padding: 1px;
+}
+
+.weather-part {
+  display: flex;
+}
+
+.body-first {
+  flex: 1;
+  display: flex;
+}
+
+.c_city {
+  margin: 0px 0px 0px 15px;
+}
+
+.first-column {
+  flex: 2;
+}
+
+.day_current {
+  flex: 3;
+}
+
+.day_ctof {
+  display: flex;
+  flex: 0.5;
+}
+
+.ctof {
+  display: flex;
+  margin-left: 50px;
+}
+
+.celcius,
+.fahrenheit {
+  width: 30px;
+  height: 30px;
+  margin-top: 15px;
+  margin-right: 25px;
+}
+
+.second-column {
+  flex: 1;
+}
+
+.day {
+  margin: 15px 0px 1px 15px;
+}
+
+.c-weather {
+  margin: 0;
+  margin: 5px 0px 15px 15px;
+}
+
+.current-weather {
+  width: 150px;
+  border-radius: 150px;
+  margin: 0px 0px 15px 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.degree {
+  text-align: center;
+  font-size: 25px;
+  line-height: 30px;
+  margin-top: 100px;
+}
+
+.body-end {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upper-row,
+.lower-row {
+  display: flex;
+}
+
+
+.humidity,
+.wind,
+.uv-index,
+.air,
+.umbrella {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.measurement {
+  width: 50px;
+  height: px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text {
+  text-align: center;
+  margin-top: 0;
+}
+
+.text1 {
+  text-align: center;
+  margin-top: -5px;
+}
+
+.focus {
+
+  display: flex;
+}
+
+.forecast-item {
+  flex: 1;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  color: #333;
+  margin: 3px;
+}
+
+.forecast-item p {
+  margin-top: 0;
+  margin-bottom: 3px;
+  font-size: 18px;
+  color: #666;
+}
+
+.focus-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 75px;
+  border-radius: px;
+  margin: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
