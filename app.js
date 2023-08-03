@@ -64,28 +64,46 @@ let celsiusTemp = null;
 //weather api  
 let apiKey = "14e8acca972d564954ea713302040d4f";
 
-function showTemperature(response) {
+function showweathercondition(response) {
   console.log(response);
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#tempNumber");
   temperatureElement.innerHTML = `${temperature}°C`;
+
+  let humidity = Math.round(response.data.main.humidity);
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = `${humidity}%`;
+
+  let wind = Math.round(response.data.wind.speed);
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = `${wind}mph`;
+
+
+  let condition = response.data.weather[0].description;
+  let conditionElement = document.querySelector("#condition");
+  conditionElement.innerHTML = condition;
+
+
+  let feelsLike = Math.round(response.data.main.feels_like);
+  let feelsLikeElement = document.querySelector("#feels_like");
+  feelsLikeElement.innerHTML = `${feelsLike}°C`;
 }
 
 // Weather API function
 function getWeatherData(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
-  axios.get(apiUrl).then(showTemperature);
+  axios.get(apiUrl).then(showweathercondition);
 }
 
 // Search function
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#searchCityText");
-  let city = searchInput.value; // Get the value from the input field
+  let city = searchInput.value;
   let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = city; // Update the city display
-  getWeatherData(city); // Fetch weather data for the given city
+  cityElement.innerHTML = city;
+  getWeatherData(city);
 }
 
 let form = document.querySelector("#search-city-icon");
@@ -99,7 +117,7 @@ function searchLocation(position) {
   axios.get(apiUrl).then((response) => {
     let cityElement = document.querySelector("#city");
     cityElement.innerHTML = response.data.name;
-    showTemperature(response);
+    showweathercondition(response);
   });
 }
 
