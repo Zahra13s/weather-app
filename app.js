@@ -48,6 +48,10 @@ function showweathercondition(response) {
   let temperatureElement = document.querySelector("#tempNumber");
   temperatureElement.innerHTML = `${temperature}°C`;
 
+  let description = response.data.weather[0].main;
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = `${description}`;
+
   let humidity = Math.round(response.data.main.humidity);
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = `${humidity}%`;
