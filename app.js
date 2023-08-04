@@ -39,28 +39,6 @@ let time = document.querySelector("#time");
 time.innerHTML = `${current.toLocaleTimeString()}`;
 
 
-//To change celsius
-function showFahrenheitTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#tempNumber");
-  let fahrenheitTemperature = (celsiusTemp * 9 / 5) + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function showCelsiusTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#tempNumber");
-  temperatureElement.innerHTML = Math.round(celsiusTemp);
-}
-
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", showFahrenheitTemp);
-
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", showCelsiusTemp);
-
-let celsiusTemp = null;
-
 //weather api  
 let apiKey = "14e8acca972d564954ea713302040d4f";
 
@@ -87,6 +65,9 @@ function showweathercondition(response) {
   let feelsLike = Math.round(response.data.main.feels_like);
   let feelsLikeElement = document.querySelector("#feels_like");
   feelsLikeElement.innerHTML = `${feelsLike}°C`;
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 // Weather API function
@@ -123,8 +104,10 @@ function searchLocation(position) {
 
 function getCurrentLocation(event) {
   event.preventDefault();
+
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
 let currentButton = document.querySelector("#currentButton");
 currentButton.addEventListener("click", getCurrentLocation);
+
