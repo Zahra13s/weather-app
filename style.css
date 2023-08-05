@@ -160,16 +160,17 @@ body {
 }
 
 .measurement {
-  width: 50px;
+  width: 30px;
   height: px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 25px;
+  margin: 25px auto 10px auto;
 }
 
 .text {
   text-align: center;
   margin-top: 0;
+  margin-bottom: 3px;
 }
 
 .text1 {
