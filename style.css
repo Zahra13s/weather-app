@@ -23,9 +23,9 @@ body {
 }
 
 .logo {
-  width: 50px;
+  width: 100px;
   border-radius: 25px;
-  margin: 25px;
+  display: flex;
 }
 
 .search-bar {
@@ -164,18 +164,18 @@ body {
   height: px;
   display: block;
   margin-top: 25px;
-  margin: 25px auto 10px auto;
+  margin: 20px auto 10px auto;
 }
 
 .text {
   text-align: center;
   margin-top: 0;
-  margin-bottom: 3px;
+  margin-bottom: 10px;
 }
 
 .text1 {
   text-align: center;
-  margin-top: -5px;
+  margin-top: 0px;
 }
 
 .focus {
