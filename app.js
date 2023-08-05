@@ -33,7 +33,7 @@ let hour = current.getHours();
 let minute = current.getMinutes();
 
 let date_time = document.querySelector("#date");
-date_time.innerHTML = `${date}/${month}/${currentYear} ${day}`;
+date_time.innerHTML = `${date}/${month}/${currentYear} </br> ${day}`;
 
 let time = document.querySelector("#time");
 time.innerHTML = `${current.toLocaleTimeString()}`;
@@ -114,4 +114,38 @@ function getCurrentLocation(event) {
 
 let currentButton = document.querySelector("#currentButton");
 currentButton.addEventListener("click", getCurrentLocation);
+
+//temp celcius to farenheit
+const temperatureElement = document.getElementById('tempNumber');
+const celsiusLink = document.getElementById('celsius');
+const fahrenheitLink = document.getElementById('fahrenheit');
+
+celsiusLink.addEventListener('click', convertToCelsius);
+fahrenheitLink.addEventListener('click', convertToFahrenheit);
+
+function convertToCelsius() {
+  temperatureElement.innerHTML = '17°C';
+}
+
+function convertToFahrenheit() {
+  const temperature = parseFloat(temperatureElement.innerText);
+  const fahrenheit = Math.round((temperature * 9 / 5) + 32);
+  temperatureElement.innerHTML = `${fahrenheit}°F`;
+}
+
+// Fetch temperature from OpenWeather API
+function fetchTemperatureFromAPI() {
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=YOUR_CITY_NAME&appid=${apiKey}&units=metric`;
+
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      const temperature = Math.round(data.main.temp);
+      temperatureElement.innerHTML = `${temperature}°C`;
+    })
+    .catch(error => console.error('Error fetching temperature:', error));
+}
+
+// Call this function to fetch the temperature when the page loads
+fetchTemperatureFromAPI();
 
