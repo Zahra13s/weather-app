@@ -111,7 +111,6 @@ button {
   transition: opacity 0.15s;
   pointer-events: none;
   white-space: nowrap;
-  font-family: Roboto, Arial;
   font-size: 10px;
 }
 
