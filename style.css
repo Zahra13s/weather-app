@@ -232,7 +232,7 @@ button {
   margin-top: 0px;
 }
 
-.focus {
+.forecast {
   display: flex;
   box-shadow: 0 -2px 4px rgba(144, 210, 248, 0.15);
 }
@@ -242,22 +242,20 @@ button {
   text-align: center;
   background-color: #ffffff;
   border-radius: 10px;
-  padding: 0px 0px 15px 0px;
+  padding: 10px;
   color: #333;
   margin: 3px;
 }
 
 .forecast-item p {
-  margin-top: 0;
-  margin-bottom: 3px;
+  margin: 0;
   font-size: 15px;
   color: #666;
 }
 
-.focus-image {
+.forecast-image {
   width: 85px;
   height: 85px;
-  border-radius: 75px;
-  border-radius: px;
-  margin: 3px;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }

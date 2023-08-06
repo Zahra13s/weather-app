@@ -17,9 +17,9 @@
   <div class="body-part">
     <div class="navigation">
       <img class="logo" src="./image/weather.gif">
-      <div class="search">
+      <div class="search" id="submitControl">
         <form id="search-form">
-          <input class="search-bar" type="search" placeholder="Search" id="searchCityText">
+          <input class="search-bar" type="search" placeholder="Search" id="search-city-text">
           <button type="submit" class=" search-icon" id="search-city-icon">
             <i class="fa fa-search"></i>
           </button>
@@ -88,9 +88,9 @@
         </div>
         <div class="lower-row">
           <div class="air">
-            <img class="measurement" src="./image/Cloud.jpeg">
-            <p class="text">Cloudy Cover</p>
-            <p class="text1" id="condition">Clear Sky</p>
+            <img class="measurement" src="./image/pressure.jpeg">
+            <p class="text">Preasure</p>
+            <p class="text1" id="pressure">1015 Pa</p>
           </div>
           <div class="umbrella">
             <img class="measurement" src="./image/termometer.jpg">
@@ -101,39 +101,13 @@
       </div>
     </div>
     <!--focus-->
-    <div class="focus" id="weather-forecast">
+    <!-- HTML Structure -->
+    <div class="forecast" id="forecast">
       <div class="forecast-item">
-        <img src="./image/rainny.jpg" class="focus-image">
-        <p style="font-weight: bolder; font-size: 17px; margin-bottom: 10px;">Mon</p>
-        <p>25°C 22°C</p>
-      </div>
-      <div class="forecast-item">
-        <img src="./image/abitrainy.png" class="focus-image">
-        <p style="font-weight: bolder; font-size: 17px; margin-bottom: 10px;">Tue</p>
-        <p>27°C 25°C</p>
-      </div>
-      <div class="forecast-item">
-        <img src="./image/thunder.png" class="focus-image">
-        <p style="font-weight: bolder; font-size: 17px; margin-bottom: 10px;">Wed</p>
-        <p>23°C 20°C</p>
-      </div>
-      <div class="forecast-item">
-
-        <img src="./image/cloudy.png.crdownload" class="focus-image">
-        <p style="font-weight: bolder; font-size: 17px; margin-bottom: 10px;">Thu</p>
-        <p>27°C 25°C</p>
-      </div>
-      <div class="forecast-item">
-        <img src="./image/sunny.png" class="focus-image">
-        <p style="font-weight: bolder; font-size: 17px; margin-bottom: 10px;">Fri</p>
-        <p>10°C 28°C</p>
-      </div>
-      <div class="forecast-item">
-        <img src="./image/abitsunny.jpeg" class="focus-image">
-        <p style="font-weight: bolder; font-size: 17px; margin-bottom: 10px;">Sat</p>
-        <p>15°C 23°C</p>
+        <!-- Forecast items will be dynamically inserted here -->
       </div>
     </div>
+
   </div>
 </body>
 <script src="./app.js" src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places" async
