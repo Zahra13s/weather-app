@@ -39,7 +39,7 @@ body {
   border-radius: 15px;
   border: none;
   box-shadow: 0 2px 4px rgba(144, 210, 248, 0.3);
-  font-size: large;
+  font-size: 16px;
 }
 
 .search-icon {
@@ -62,12 +62,12 @@ button {
 .current {
   border: none;
   height: 35px;
-  width: 80px;
+  width: 75px;
   padding: 5px 10px 5px 10px;
   margin-left: 5px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(144, 210, 248, 0.3);
-  font-size: large;
+  font-size: 16px;
 }
 
 .city-name {
