@@ -37,7 +37,10 @@ date_time.innerHTML = `${date}/${month}/${currentYear} </br> ${day}`;
 
 let time = document.querySelector("#time");
 time.innerHTML = `${current.toLocaleTimeString()}`;
-
+//6 forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-forecast")
+}
 
 //weather api  
 let apiKey = "14e8acca972d564954ea713302040d4f";
@@ -133,19 +136,6 @@ function convertToFahrenheit() {
   temperatureElement.innerHTML = `${fahrenheit}°F`;
 }
 
-// Fetch temperature from OpenWeather API
-function fetchTemperatureFromAPI() {
-  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=YOUR_CITY_NAME&appid=${apiKey}&units=metric`;
 
-  fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
-      const temperature = Math.round(data.main.temp);
-      temperatureElement.innerHTML = `${temperature}°C`;
-    })
-    .catch(error => console.error('Error fetching temperature:', error));
-}
-
-// Call this function to fetch the temperature when the page loads
-fetchTemperatureFromAPI();
+displayForecast();
 
