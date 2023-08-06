@@ -8,6 +8,7 @@ body {
   width: 800px;
   margin: auto;
   box-shadow: 0 2px 4px rgba(144, 210, 248, 0.3);
+  border-radius: 15px;
 }
 
 .navigation {
@@ -249,7 +250,7 @@ button {
 .forecast-item p {
   margin-top: 0;
   margin-bottom: 3px;
-  font-size: 18px;
+  font-size: 15px;
   color: #666;
 }
 
