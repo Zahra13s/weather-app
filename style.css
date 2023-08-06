@@ -55,6 +55,10 @@ body {
   box-shadow: 0 2px 4px rgba(144, 210, 248, 0.3);
 }
 
+.search_image {
+  width: 18px;
+}
+
 button {
   background-color: white;
   height: 40px;
@@ -79,7 +83,7 @@ button {
   text-align: center;
   margin: auto;
   padding: 3px;
-  font-size: larger;
+  font-size: 25px;
 }
 
 .time {
